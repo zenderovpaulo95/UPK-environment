@@ -1,0 +1,32 @@
+﻿<Window x:Name="MainForm" x:Class="UPK_Environment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UPK_Environment"
+        mc:Ignorable="d"
+        Title="Оболочка для работы с UPK файлами" Height="760" Width="400" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="220*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="42*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Pack_Compress_Btn" Content="Запаковать и сжать архив" Margin="0,508,19,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="163" Grid.Column="1" Click="Pack_Compress_Btn_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="Unpack_Btn" Content="Распаковать архив" Margin="0,508,177,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="129" Click="Unpack_Btn_Click" Grid.ColumnSpan="2"/>
+        <RichTextBox x:Name="LogTxtBox" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="385" Margin="15,10,0,0" VerticalAlignment="Top" Width="360">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ProgressBar x:Name="pb" HorizontalAlignment="Left" Height="25" Margin="0,674,0,0" VerticalAlignment="Top" Width="298" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Button x:Name="PackSeveralArchivesBtn" Content="Запаковать несколько архивов" Grid.Column="1" HorizontalAlignment="Left" Margin="10,555,0,0" VerticalAlignment="Top" Width="275" Click="PackSeveralArchivesBtn_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="ExtractSeveralArchivesBtn" Content="Распаковать несколько архивов" Grid.Column="1" HorizontalAlignment="Left" Margin="10,617,0,0" VerticalAlignment="Top" Width="266" Click="ExtractSeveralArchivesBtn_Click"/>
+        <ComboBox x:Name="GamesSelect" HorizontalAlignment="Left" Margin="21,438,0,0" VerticalAlignment="Top" Width="354" Height="24" Grid.ColumnSpan="4"/>
+        <Label Content="Выбор костылей:" Grid.Column="1" HorizontalAlignment="Left" Margin="95,407,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
